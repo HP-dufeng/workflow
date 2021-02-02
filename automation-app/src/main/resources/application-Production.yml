@@ -1,0 +1,25 @@
+server:
+  port: 80
+
+spring:
+  datasource:
+    username: postgres
+    password: test
+    url: jdbc:postgresql://localcontainer:5432/automation
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://test.powertrade.lumicable.cn/useridentity
+          key-set-uri: https://test.powertrade.lumicable.cn/useridentity/.well-known/openid-configuration/jwks
+      client:
+        registration:
+          permission_manage:
+            provider: uaa
+            client-id: permission_manage
+            client-secret: permission_manage
+            authorization-grant-type: client_credentials
+            scope: internal_service
+        provider:
+          uaa:
+            issuer-uri: https://test.powertrade.lumicable.cn/useridentity

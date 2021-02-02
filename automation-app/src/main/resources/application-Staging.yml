@@ -1,0 +1,17 @@
+server:
+  port: 80
+
+spring:
+  datasource:
+    username: super_user
+    password: bestadmin
+    url: jdbc:postgresql://pgm-j6cy7ejy60rk0386129210.pg.rds.aliyuncs.com:1921/automation
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://test.powertrade.lumicable.cn/useridentity
+          key-set-uri: https://test.powertrade.lumicable.cn/useridentity/.well-known/openid-configuration/jwks
+        provider:
+          uaa:
+            issuer-uri: https://test.powertrade.lumicable.cn/useridentity

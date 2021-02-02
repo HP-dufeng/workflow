@@ -1,0 +1,48 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /automationprocess
+
+logging:
+  level:
+    dangqu: info
+
+flowable:
+  idm: {enabled: false}
+  cmmn: {enabled: false}
+  dmn: {enabled: false}
+  content: {enabled: false}
+  form: {enabled: false}
+
+spring:
+  application:
+    name: automationprocess
+  datasource:
+    username: postgres
+    password: test
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localcontainer:5432/automation
+    hikari:
+      idleTimeout: 300000
+      maxLifetime: 600000
+      maximumPoolSize: 50
+      minimumIdle: 10
+      poolName: ${spring.application.name}
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://test.powertrade.lumicable.cn/useridentity
+          key-set-uri: https://test.powertrade.lumicable.cn/useridentity/.well-known/openid-configuration/jwks
+      client:
+        registration:
+          permission_manage:
+            provider: uaa
+            client-id: permission_manage
+            client-secret: permission_manage
+            authorization-grant-type: client_credentials
+            scope: internal_service
+        provider:
+          uaa:
+            issuer-uri: https://test.powertrade.lumicable.cn/useridentity
+

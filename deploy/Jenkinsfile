@@ -1,0 +1,130 @@
+node('jnlp') {
+  // 镜像仓库前缀
+  def NAMESPACE = "dangqu-powertrade"
+  def deploymentNamespace= "pt-api-test"
+  def serviceName= "automation-process-api"
+  def tag= "latest"
+  def SERVER_URL = "swr.cn-east-2.myhuaweicloud.com"
+  def full_image_name = ""
+  def FULL_ADDRESS = "${SERVER_URL}/${NAMESPACE}"
+  def SERVER_USERNAME = "cn-east-2@S4HEKI7RQ7KC4ITKGBZO"
+  def SERVER_PASSWORD = "9d73866b35379093c0173a535e1f58d8e1f4211b6fb39aa7fa8ec98158ce6d83"
+  def DEPLOYMENT_NODE_IP = "192.168.125.144"
+  def DEPLOYMENT_NODE_SSH_PORT = "22"
+  def DEPLOYMENT_NODE_SSH_USERNAME = "root"
+  def DEPLOYMENT_NODE_SSH_PASSWORD = "bestadmin"
+  def buildId = ""
+  def skipDeploy = false
+
+
+  stage('code pull') {
+    waitUntil {
+      try{
+        buildId = currentBuild.number.toString()
+        echo buildId
+        echo ref
+        scmVars = checkout([
+            $class: 'GitSCM',
+            branches: [[name: ref]],
+            doGenerateSubmoduleConfigurations: scm.doGenerateSubmoduleConfigurations,
+            extensions: scm.extensions,
+            userRemoteConfigs: scm.userRemoteConfigs
+        ])
+        echo ref
+        if ( ref == "refs/heads/dev" ) {
+          tag = "latest"
+          DEPLOYMENT_NODE_IP="192.168.125.144"
+        }
+        else if ( ref == "refs/heads/release"){
+          tag = "release"
+          DEPLOYMENT_NODE_IP = "192.168.125.152"
+          SERVER_USERNAME= "docker-registry@1407097647910275"
+          SERVER_PASSWORD= "docker-registry"
+          SERVER_URL="registry.cn-hongkong.aliyuncs.com"
+        }
+        else if ( ref.startsWith("refs/tags/")){
+          tag = ref.substring(10,ref.length())
+          echo tag
+          buildId="${tag}.${buildId}"
+          echo buildId
+          skipDeploy = true
+          SERVER_USERNAME= "docker-registry@1407097647910275"
+          SERVER_PASSWORD= "docker-registry"
+          SERVER_URL="registry.cn-hongkong.aliyuncs.com"
+        }
+        else{
+          echo "not supported"
+        }
+        FULL_ADDRESS = "${SERVER_URL}/${NAMESPACE}"
+        script {
+          echo "pull successfully"
+        }   
+        true       
+      }catch(error){
+        echo "Retry"
+        echo error
+        false              
+      }
+    }
+  }
+  stage('docker login') {
+    waitUntil {
+      try{
+        script {
+          def login= sh (returnStdout: true, script: "docker login --username=${SERVER_USERNAME} --password=${SERVER_PASSWORD} ${SERVER_URL}"  )
+        }
+        true    
+      }catch(error){
+        echo "Retry"
+        false 
+      }
+    }
+  }
+  stage('build in docker') {
+    script {
+      echo "begin build in docker"
+      echo buildId
+        full_image_name= "${FULL_ADDRESS}/${serviceName}:${tag}"
+        def logs= sh (returnStdout: true, script: "deploy/build.sh ${full_image_name} ${buildId}" )
+      echo "end build in docker"
+    }      
+  }
+  stage('push to registry') {
+    if(skipDeploy){
+      echo "skip deploy"
+    }
+    waitUntil {
+      try{
+        script {
+          echo "begin push to registry"
+
+        def push= sh (returnStdout: true, script: "docker push ${full_image_name}"  )
+          
+          echo "end push to huawei yun registry"
+        }    
+        true
+      }catch(error){
+        echo "Retry"
+        false       
+      }  
+    }  
+  }
+  stage('deployment') {
+    waitUntil {
+      try{
+          script {
+            echo "begin deployment by ssh"
+            def scripts="sshpass -p '${DEPLOYMENT_NODE_SSH_PASSWORD}' ssh -o StrictHostKeyChecking=no ${DEPLOYMENT_NODE_SSH_USERNAME}@${DEPLOYMENT_NODE_IP} 'kubectl --insecure-skip-tls-verify -n ${deploymentNamespace} set env deployments ${serviceName} build_version=${buildId}' "
+            def deploument= sh (returnStdout: true, script: scripts  )
+
+            echo "end deployment by ssh"
+            }
+            true
+         }
+         catch(error){
+            echo "Retry"
+            false    
+         } 
+    }        
+  }
+}

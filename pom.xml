@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+
+  <!-- <parent>
+
+
+    <groupId>org.springframework.boot</groupId>
+
+    <artifactId>spring-boot-starter-parent</artifactId>
+
+    <version>2.4.0</version>
+
+    <relativePath />
+
+
+  </parent> -->
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>dangqu.powertrade</groupId>
+  <artifactId>automation-root</artifactId>
+  <version>1.0.0</version>
+  <name>automation</name>
+  <packaging>pom</packaging>
+
+
+  <modules>
+    <module>automation-common</module>
+    <module>automation-json-converter</module>
+    <module>automation-modeler-service</module>
+    <module>automation-modeler-rest</module>
+    <module>automation-process-rest</module>
+    <module>automation-app</module>
+  </modules>
+
+
+  <properties>
+    <java.version>11</java.version>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <project.version>1.0.0</project.version>
+
+    <powertrade.infrastructure.version>1.0.0-SNAPSHOT</powertrade.infrastructure.version>
+
+    <flowable.version>6.6.0</flowable.version>
+    <spring.boot.version>2.4.2</spring.boot.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <!-- Import dependency management from Spring Boot -->
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring.boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <!-- powertrade infrastructure -->
+      <dependency>
+        <groupId>dangqu.powertrade</groupId>
+        <artifactId>powertrade-healthcheck-conf</artifactId>
+        <version>${powertrade.infrastructure.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>dangqu.powertrade</groupId>
+        <artifactId>powertrade-security-conf</artifactId>
+        <version>${powertrade.infrastructure.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>dangqu.powertrade</groupId>
+        <artifactId>powertrade-spring-boot-starter-modelmapper</artifactId>
+        <version>${powertrade.infrastructure.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>dangqu.powertrade</groupId>
+        <artifactId>powertrade-logback-json</artifactId>
+        <version>${powertrade.infrastructure.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>dangqu.powertrade</groupId>
+        <artifactId>automation-common</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>dangqu.powertrade</groupId>
+        <artifactId>automation-json-converter</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>dangqu.powertrade</groupId>
+        <artifactId>automation-modeler-service</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>dangqu.powertrade</groupId>
+        <artifactId>automation-modeler-rest</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>dangqu.powertrade</groupId>
+        <artifactId>automation-process-rest</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+  
+
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-core</artifactId>
+        <version>5.4.2</version>
+      </dependency>
+      <!-- DATABASE -->
+      <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis</artifactId>
+        <version>3.5.5</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis-spring</artifactId>
+        <version>2.0.5</version>
+      </dependency>
+      <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>42.2.6</version>
+        <scope>runtime</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-boot-starter</artifactId>
+        <version>3.0.0</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.flowable</groupId>
+        <artifactId>flowable-spring-boot-starter</artifactId>
+        <version>${flowable.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.flowable</groupId>
+        <artifactId>flowable-spring-boot-starter-actuator</artifactId>
+        <version>${flowable.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.11</version>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.flowable</groupId>
+      <artifactId>flowable-spring-boot-starter</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>dangqu.powertrade</groupId>
+      <artifactId>powertrade-spring-boot-starter-modelmapper</artifactId>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.3.1</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.1</version>
+          <configuration>
+            <source>${maven.compiler.source}</source>
+            <target>${maven.compiler.target}</target>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+</project>

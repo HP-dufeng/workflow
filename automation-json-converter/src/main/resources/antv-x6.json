@@ -1,0 +1,1770 @@
+{
+    "cells": [
+        {
+            "position": {
+                "x": 435,
+                "y": 0
+            },
+            "size": {
+                "width": 50,
+                "height": 50
+            },
+            "shape": "start-node",
+            "ports": {
+                "groups": {
+                    "out": {
+                        "position": "bottom",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    }
+                },
+                "items": [
+                    {
+                        "group": "out",
+                        "id": "7d5eae2c-8ff0-4679-94a5-1c90932170b3"
+                    }
+                ]
+            },
+            "id": "f4df08f3-4915-4088-a5bc-fccea868bff8",
+            "zIndex": 1
+        },
+        {
+            "position": {
+                "x": 435,
+                "y": 70
+            },
+            "size": {
+                "width": 80,
+                "height": 42
+            },
+            "attrs": {
+                "text": {
+                    "text": "填写请假单"
+                }
+            },
+            "shape": "initiate-node",
+            "ports": {
+                "groups": {
+                    "top": {
+                        "position": "top",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "right": {
+                        "position": "right",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "bottom": {
+                        "position": "bottom",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "left": {
+                        "position": "left",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    }
+                },
+                "items": [
+                    {
+                        "group": "top",
+                        "id": "800168d4-e6d6-4049-91f6-33b723b41070"
+                    },
+                    {
+                        "group": "right",
+                        "id": "96e76e0f-600d-4134-b704-2d6615853872"
+                    },
+                    {
+                        "group": "bottom",
+                        "id": "2c106cf2-4ba8-4ee1-bce2-72319c99dc69"
+                    },
+                    {
+                        "group": "left",
+                        "id": "ba699305-c2a6-459b-ab82-a74be09bb941"
+                    }
+                ]
+            },
+            "id": "29c3c4ed-79bb-4a7e-9674-d3796b51d02c",
+            "zIndex": 2
+        },
+        {
+            "position": {
+                "x": 450,
+                "y": 806
+            },
+            "size": {
+                "width": 50,
+                "height": 50
+            },
+            "shape": "end-node",
+            "ports": {
+                "groups": {
+                    "in": {
+                        "position": "top",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    }
+                },
+                "items": [
+                    {
+                        "group": "in",
+                        "id": "e10fa244-e079-4f77-8a14-dcff649ca499"
+                    }
+                ]
+            },
+            "id": "e61e1f82-3db8-4c0f-a256-f9a39188fe26",
+            "zIndex": 3
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "295614f5-1ed4-4b07-a2f3-b9d8cdcafe7e",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "f4df08f3-4915-4088-a5bc-fccea868bff8",
+                "port": "7d5eae2c-8ff0-4679-94a5-1c90932170b3"
+            },
+            "target": {
+                "cell": "29c3c4ed-79bb-4a7e-9674-d3796b51d02c",
+                "port": "800168d4-e6d6-4049-91f6-33b723b41070"
+            },
+            "zIndex": 4
+        },
+        {
+            "position": {
+                "x": 425,
+                "y": 138
+            },
+            "size": {
+                "width": 100,
+                "height": 70
+            },
+            "attrs": {
+                "text": {
+                    "text": "判断请假类型"
+                }
+            },
+            "shape": "branch-node",
+            "ports": {
+                "groups": {
+                    "top": {
+                        "position": "top",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "right": {
+                        "position": "right",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "bottom": {
+                        "position": "bottom",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "left": {
+                        "position": "left",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    }
+                },
+                "items": [
+                    {
+                        "group": "top",
+                        "id": "6160f8a7-47ec-4fc0-b85d-7555c01580f9"
+                    },
+                    {
+                        "group": "right",
+                        "id": "5c92c9aa-8791-481d-8062-45f3a1b2cd04"
+                    },
+                    {
+                        "group": "bottom",
+                        "id": "b4ab74af-8b80-4f64-9e59-9b6741f3bb40"
+                    },
+                    {
+                        "group": "left",
+                        "id": "02185186-6a50-44cd-9cd0-0e34761f05ee"
+                    }
+                ]
+            },
+            "id": "ea0f75a9-c2c5-4831-ab00-853af7422c9b",
+            "zIndex": 5
+        },
+        {
+            "position": {
+                "x": 280,
+                "y": 240
+            },
+            "size": {
+                "width": 80,
+                "height": 42
+            },
+            "attrs": {
+                "text": {
+                    "text": "菜菜审批"
+                }
+            },
+            "shape": "user-task-node",
+            "ports": {
+                "groups": {
+                    "top": {
+                        "position": "top",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "right": {
+                        "position": "right",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "bottom": {
+                        "position": "bottom",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "left": {
+                        "position": "left",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    }
+                },
+                "items": [
+                    {
+                        "group": "top",
+                        "id": "b56ba386-c771-42e6-be2c-bd083d6c781b"
+                    },
+                    {
+                        "group": "right",
+                        "id": "826d9a40-e501-4e4f-85b8-a69c35bec201"
+                    },
+                    {
+                        "group": "bottom",
+                        "id": "bfd8a9ef-8f68-4e6c-b439-f495044f7684"
+                    },
+                    {
+                        "group": "left",
+                        "id": "6b4022b8-cb66-47f3-89fa-2458c77eb9f7"
+                    }
+                ]
+            },
+            "id": "508c363a-29a0-4a0e-ad1a-544004f8aca0",
+            "zIndex": 6
+        },
+        {
+            "position": {
+                "x": 435,
+                "y": 300
+            },
+            "size": {
+                "width": 80,
+                "height": 42
+            },
+            "attrs": {
+                "text": {
+                    "text": "部门经理审批"
+                }
+            },
+            "shape": "user-task-node",
+            "ports": {
+                "groups": {
+                    "top": {
+                        "position": "top",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "right": {
+                        "position": "right",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "bottom": {
+                        "position": "bottom",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "left": {
+                        "position": "left",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    }
+                },
+                "items": [
+                    {
+                        "group": "top",
+                        "id": "b56ba386-c771-42e6-be2c-bd083d6c781b"
+                    },
+                    {
+                        "group": "right",
+                        "id": "826d9a40-e501-4e4f-85b8-a69c35bec201"
+                    },
+                    {
+                        "group": "bottom",
+                        "id": "bfd8a9ef-8f68-4e6c-b439-f495044f7684"
+                    },
+                    {
+                        "group": "left",
+                        "id": "6b4022b8-cb66-47f3-89fa-2458c77eb9f7"
+                    }
+                ]
+            },
+            "id": "cc01cf25-3351-44ba-a9e2-8fbc5aa5ee12",
+            "zIndex": 7
+        },
+        {
+            "position": {
+                "x": 601,
+                "y": 240
+            },
+            "size": {
+                "width": 80,
+                "height": 42
+            },
+            "attrs": {
+                "text": {
+                    "text": "行政审批"
+                }
+            },
+            "shape": "user-task-node",
+            "ports": {
+                "groups": {
+                    "top": {
+                        "position": "top",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "right": {
+                        "position": "right",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "bottom": {
+                        "position": "bottom",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "left": {
+                        "position": "left",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    }
+                },
+                "items": [
+                    {
+                        "group": "top",
+                        "id": "b56ba386-c771-42e6-be2c-bd083d6c781b"
+                    },
+                    {
+                        "group": "right",
+                        "id": "826d9a40-e501-4e4f-85b8-a69c35bec201"
+                    },
+                    {
+                        "group": "bottom",
+                        "id": "bfd8a9ef-8f68-4e6c-b439-f495044f7684"
+                    },
+                    {
+                        "group": "left",
+                        "id": "6b4022b8-cb66-47f3-89fa-2458c77eb9f7"
+                    }
+                ]
+            },
+            "id": "9423eb29-1608-4c3e-8d4c-b3a86616d81a",
+            "zIndex": 8
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "a299d5f2-ae04-4fd3-82c3-67d2875d1a0f",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "ea0f75a9-c2c5-4831-ab00-853af7422c9b",
+                "port": "b4ab74af-8b80-4f64-9e59-9b6741f3bb40"
+            },
+            "target": {
+                "cell": "508c363a-29a0-4a0e-ad1a-544004f8aca0",
+                "port": "b56ba386-c771-42e6-be2c-bd083d6c781b"
+            },
+            "zIndex": 9,
+            "labels": [
+                {
+                    "attrs": {
+                        "label": {
+                            "text": "公务调休"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "778fd52d-ee9b-4503-beae-d90d63c5d0d9",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "ea0f75a9-c2c5-4831-ab00-853af7422c9b",
+                "port": "b4ab74af-8b80-4f64-9e59-9b6741f3bb40"
+            },
+            "target": {
+                "cell": "9423eb29-1608-4c3e-8d4c-b3a86616d81a",
+                "port": "b56ba386-c771-42e6-be2c-bd083d6c781b"
+            },
+            "zIndex": 10,
+            "labels": [
+                {
+                    "attrs": {
+                        "label": {
+                            "text": "婚假"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "415278cd-4120-4874-b54f-c551649e1274",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "ea0f75a9-c2c5-4831-ab00-853af7422c9b",
+                "port": "b4ab74af-8b80-4f64-9e59-9b6741f3bb40"
+            },
+            "target": {
+                "cell": "cc01cf25-3351-44ba-a9e2-8fbc5aa5ee12",
+                "port": "b56ba386-c771-42e6-be2c-bd083d6c781b"
+            },
+            "zIndex": 11,
+            "labels": [
+                {
+                    "attrs": {
+                        "label": {
+                            "text": "正常请假"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "8ef3dce6-edfa-4eb2-a008-c77c49dcda5c",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "508c363a-29a0-4a0e-ad1a-544004f8aca0",
+                "port": "bfd8a9ef-8f68-4e6c-b439-f495044f7684"
+            },
+            "target": {
+                "cell": "cc01cf25-3351-44ba-a9e2-8fbc5aa5ee12",
+                "port": "b56ba386-c771-42e6-be2c-bd083d6c781b"
+            },
+            "zIndex": 12,
+            "labels": [
+                {
+                    "attrs": {
+                        "label": {
+                            "text": "通过"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "1cf741be-6a45-4239-9331-1f46ac69252d",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "9423eb29-1608-4c3e-8d4c-b3a86616d81a",
+                "port": "bfd8a9ef-8f68-4e6c-b439-f495044f7684"
+            },
+            "target": {
+                "cell": "cc01cf25-3351-44ba-a9e2-8fbc5aa5ee12",
+                "port": "b56ba386-c771-42e6-be2c-bd083d6c781b"
+            },
+            "zIndex": 13,
+            "labels": [
+                {
+                    "attrs": {
+                        "label": {
+                            "text": "通过"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "position": {
+                "x": 425,
+                "y": 395
+            },
+            "size": {
+                "width": 100,
+                "height": 70
+            },
+            "attrs": {
+                "text": {
+                    "text": "请假天数判断"
+                }
+            },
+            "shape": "branch-node",
+            "ports": {
+                "groups": {
+                    "top": {
+                        "position": "top",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "right": {
+                        "position": "right",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "bottom": {
+                        "position": "bottom",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "left": {
+                        "position": "left",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    }
+                },
+                "items": [
+                    {
+                        "group": "top",
+                        "id": "6160f8a7-47ec-4fc0-b85d-7555c01580f9"
+                    },
+                    {
+                        "group": "right",
+                        "id": "5c92c9aa-8791-481d-8062-45f3a1b2cd04"
+                    },
+                    {
+                        "group": "bottom",
+                        "id": "b4ab74af-8b80-4f64-9e59-9b6741f3bb40"
+                    },
+                    {
+                        "group": "left",
+                        "id": "02185186-6a50-44cd-9cd0-0e34761f05ee"
+                    }
+                ]
+            },
+            "id": "7e78a2fa-559a-4827-aed2-0232bfaa609f",
+            "zIndex": 14
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "f28a1cb3-38cb-468d-91a5-963a91d3caf2",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "cc01cf25-3351-44ba-a9e2-8fbc5aa5ee12",
+                "port": "bfd8a9ef-8f68-4e6c-b439-f495044f7684"
+            },
+            "target": {
+                "cell": "7e78a2fa-559a-4827-aed2-0232bfaa609f",
+                "port": "6160f8a7-47ec-4fc0-b85d-7555c01580f9"
+            },
+            "zIndex": 15,
+            "labels": [
+                {
+                    "attrs": {
+                        "label": {
+                            "text": "通过"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "position": {
+                "x": 435,
+                "y": 516
+            },
+            "size": {
+                "width": 80,
+                "height": 42
+            },
+            "attrs": {
+                "text": {
+                    "text": "核心层"
+                }
+            },
+            "shape": "user-task-node",
+            "ports": {
+                "groups": {
+                    "top": {
+                        "position": "top",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "right": {
+                        "position": "right",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "bottom": {
+                        "position": "bottom",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "left": {
+                        "position": "left",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    }
+                },
+                "items": [
+                    {
+                        "group": "top",
+                        "id": "b56ba386-c771-42e6-be2c-bd083d6c781b"
+                    },
+                    {
+                        "group": "right",
+                        "id": "826d9a40-e501-4e4f-85b8-a69c35bec201"
+                    },
+                    {
+                        "group": "bottom",
+                        "id": "bfd8a9ef-8f68-4e6c-b439-f495044f7684"
+                    },
+                    {
+                        "group": "left",
+                        "id": "6b4022b8-cb66-47f3-89fa-2458c77eb9f7"
+                    }
+                ]
+            },
+            "id": "95b7da49-2936-4e89-8836-95e3b466493d",
+            "zIndex": 16
+        },
+        {
+            "position": {
+                "x": 249,
+                "y": 516
+            },
+            "size": {
+                "width": 80,
+                "height": 42
+            },
+            "attrs": {
+                "text": {
+                    "text": "核心层"
+                }
+            },
+            "shape": "user-task-node",
+            "ports": {
+                "groups": {
+                    "top": {
+                        "position": "top",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "right": {
+                        "position": "right",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "bottom": {
+                        "position": "bottom",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "left": {
+                        "position": "left",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    }
+                },
+                "items": [
+                    {
+                        "group": "top",
+                        "id": "b56ba386-c771-42e6-be2c-bd083d6c781b"
+                    },
+                    {
+                        "group": "right",
+                        "id": "826d9a40-e501-4e4f-85b8-a69c35bec201"
+                    },
+                    {
+                        "group": "bottom",
+                        "id": "bfd8a9ef-8f68-4e6c-b439-f495044f7684"
+                    },
+                    {
+                        "group": "left",
+                        "id": "6b4022b8-cb66-47f3-89fa-2458c77eb9f7"
+                    }
+                ]
+            },
+            "id": "cb420e65-42dd-420a-a0fd-078a7b162498",
+            "zIndex": 17
+        },
+        {
+            "position": {
+                "x": 435,
+                "y": 639
+            },
+            "size": {
+                "width": 80,
+                "height": 42
+            },
+            "attrs": {
+                "text": {
+                    "text": "总经理"
+                }
+            },
+            "shape": "user-task-node",
+            "ports": {
+                "groups": {
+                    "top": {
+                        "position": "top",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "right": {
+                        "position": "right",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "bottom": {
+                        "position": "bottom",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "left": {
+                        "position": "left",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    }
+                },
+                "items": [
+                    {
+                        "group": "top",
+                        "id": "b56ba386-c771-42e6-be2c-bd083d6c781b"
+                    },
+                    {
+                        "group": "right",
+                        "id": "826d9a40-e501-4e4f-85b8-a69c35bec201"
+                    },
+                    {
+                        "group": "bottom",
+                        "id": "bfd8a9ef-8f68-4e6c-b439-f495044f7684"
+                    },
+                    {
+                        "group": "left",
+                        "id": "6b4022b8-cb66-47f3-89fa-2458c77eb9f7"
+                    }
+                ]
+            },
+            "id": "f6a41827-100c-4f11-bf1f-6ca788d6ebe0",
+            "zIndex": 18
+        },
+        {
+            "position": {
+                "x": 601,
+                "y": 516
+            },
+            "size": {
+                "width": 80,
+                "height": 42
+            },
+            "attrs": {
+                "text": {
+                    "text": "HR确认"
+                }
+            },
+            "shape": "user-task-node",
+            "ports": {
+                "groups": {
+                    "top": {
+                        "position": "top",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "right": {
+                        "position": "right",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "bottom": {
+                        "position": "bottom",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    },
+                    "left": {
+                        "position": "left",
+                        "attrs": {
+                            "circle": {
+                                "r": 3,
+                                "magnet": true,
+                                "stroke": "#5F95FF",
+                                "strokeWidth": 1,
+                                "fill": "#fff",
+                                "style": {
+                                    "visibility": "hidden"
+                                }
+                            }
+                        }
+                    }
+                },
+                "items": [
+                    {
+                        "group": "top",
+                        "id": "b56ba386-c771-42e6-be2c-bd083d6c781b"
+                    },
+                    {
+                        "group": "right",
+                        "id": "826d9a40-e501-4e4f-85b8-a69c35bec201"
+                    },
+                    {
+                        "group": "bottom",
+                        "id": "bfd8a9ef-8f68-4e6c-b439-f495044f7684"
+                    },
+                    {
+                        "group": "left",
+                        "id": "6b4022b8-cb66-47f3-89fa-2458c77eb9f7"
+                    }
+                ]
+            },
+            "id": "1d1746de-47e8-46ff-8801-2fa346908fc5",
+            "zIndex": 19
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "556c91ff-5927-4c3a-a632-cf410531ed18",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "7e78a2fa-559a-4827-aed2-0232bfaa609f",
+                "port": "02185186-6a50-44cd-9cd0-0e34761f05ee"
+            },
+            "target": {
+                "cell": "cb420e65-42dd-420a-a0fd-078a7b162498",
+                "port": "b56ba386-c771-42e6-be2c-bd083d6c781b"
+            },
+            "zIndex": 20,
+            "labels": [
+                {
+                    "attrs": {
+                        "label": {
+                            "text": "因公3-5天or因私3-10天"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "bcf4c38b-4ea1-4da6-b3ae-98c5d9c9b153",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "7e78a2fa-559a-4827-aed2-0232bfaa609f",
+                "port": "b4ab74af-8b80-4f64-9e59-9b6741f3bb40"
+            },
+            "target": {
+                "cell": "95b7da49-2936-4e89-8836-95e3b466493d",
+                "port": "b56ba386-c771-42e6-be2c-bd083d6c781b"
+            },
+            "zIndex": 21,
+            "labels": [
+                {
+                    "attrs": {
+                        "label": {
+                            "text": "因公5天以上or因私10天以上"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "af13f30c-e6fe-42a3-b3c1-bfc3a2b78b7e",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "7e78a2fa-559a-4827-aed2-0232bfaa609f",
+                "port": "5c92c9aa-8791-481d-8062-45f3a1b2cd04"
+            },
+            "target": {
+                "cell": "1d1746de-47e8-46ff-8801-2fa346908fc5",
+                "port": "b56ba386-c771-42e6-be2c-bd083d6c781b"
+            },
+            "zIndex": 22,
+            "labels": [
+                {
+                    "attrs": {
+                        "label": {
+                            "text": "培训请假"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "7e298747-1ba5-42e6-8694-7e75fe3a89cb",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "95b7da49-2936-4e89-8836-95e3b466493d",
+                "port": "bfd8a9ef-8f68-4e6c-b439-f495044f7684"
+            },
+            "target": {
+                "cell": "f6a41827-100c-4f11-bf1f-6ca788d6ebe0",
+                "port": "b56ba386-c771-42e6-be2c-bd083d6c781b"
+            },
+            "zIndex": 23,
+            "labels": [
+                {
+                    "attrs": {
+                        "label": {
+                            "text": "通过"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "25ce8eeb-afb4-4815-8c1d-d5e6fe45fe27",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "f6a41827-100c-4f11-bf1f-6ca788d6ebe0",
+                "port": "bfd8a9ef-8f68-4e6c-b439-f495044f7684"
+            },
+            "target": {
+                "cell": "e61e1f82-3db8-4c0f-a256-f9a39188fe26",
+                "port": "e10fa244-e079-4f77-8a14-dcff649ca499"
+            },
+            "zIndex": 24
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "767070a0-dd98-4fb4-ae00-771ef33503fc",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "95b7da49-2936-4e89-8836-95e3b466493d",
+                "port": "6b4022b8-cb66-47f3-89fa-2458c77eb9f7"
+            },
+            "target": {
+                "cell": "e61e1f82-3db8-4c0f-a256-f9a39188fe26",
+                "port": "e10fa244-e079-4f77-8a14-dcff649ca499"
+            },
+            "zIndex": 25,
+            "labels": [
+                {
+                    "attrs": {
+                        "label": {
+                            "text": "不通过"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "5a8da86d-dfe4-42b6-9353-c13f74cf9c14",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "cb420e65-42dd-420a-a0fd-078a7b162498",
+                "port": "bfd8a9ef-8f68-4e6c-b439-f495044f7684"
+            },
+            "target": {
+                "cell": "e61e1f82-3db8-4c0f-a256-f9a39188fe26",
+                "port": "e10fa244-e079-4f77-8a14-dcff649ca499"
+            },
+            "zIndex": 26
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "ea638ad2-0b3f-4300-bbaa-6e38c87fd585",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "1d1746de-47e8-46ff-8801-2fa346908fc5",
+                "port": "bfd8a9ef-8f68-4e6c-b439-f495044f7684"
+            },
+            "target": {
+                "cell": "e61e1f82-3db8-4c0f-a256-f9a39188fe26",
+                "port": "e10fa244-e079-4f77-8a14-dcff649ca499"
+            },
+            "zIndex": 27
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "ce8cb1ea-4e72-41e6-b3cd-158eba6f3e68",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "7e78a2fa-559a-4827-aed2-0232bfaa609f",
+                "port": "5c92c9aa-8791-481d-8062-45f3a1b2cd04"
+            },
+            "target": {
+                "cell": "e61e1f82-3db8-4c0f-a256-f9a39188fe26",
+                "port": "e10fa244-e079-4f77-8a14-dcff649ca499"
+            },
+            "zIndex": 28,
+            "labels": [
+                {
+                    "attrs": {
+                        "label": {
+                            "text": "2天内"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "bafc55ec-c732-46eb-b02c-68aa060a81c5",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "cc01cf25-3351-44ba-a9e2-8fbc5aa5ee12",
+                "port": "6b4022b8-cb66-47f3-89fa-2458c77eb9f7"
+            },
+            "target": {
+                "cell": "e61e1f82-3db8-4c0f-a256-f9a39188fe26",
+                "port": "e10fa244-e079-4f77-8a14-dcff649ca499"
+            },
+            "zIndex": 29,
+            "labels": [
+                {
+                    "attrs": {
+                        "label": {
+                            "text": "不通过"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "51b75092-7286-402f-9165-160674848770",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "508c363a-29a0-4a0e-ad1a-544004f8aca0",
+                "port": "6b4022b8-cb66-47f3-89fa-2458c77eb9f7"
+            },
+            "target": {
+                "cell": "e61e1f82-3db8-4c0f-a256-f9a39188fe26",
+                "port": "e10fa244-e079-4f77-8a14-dcff649ca499"
+            },
+            "zIndex": 30,
+            "labels": [
+                {
+                    "attrs": {
+                        "label": {
+                            "text": "不通过"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "068f7c5d-16ab-41b0-a204-654a803a0feb",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "9423eb29-1608-4c3e-8d4c-b3a86616d81a",
+                "port": "826d9a40-e501-4e4f-85b8-a69c35bec201"
+            },
+            "target": {
+                "cell": "e61e1f82-3db8-4c0f-a256-f9a39188fe26",
+                "port": "e10fa244-e079-4f77-8a14-dcff649ca499"
+            },
+            "zIndex": 31,
+            "labels": [
+                {
+                    "attrs": {
+                        "label": {
+                            "text": "不通过"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "0888a37a-edde-45ec-a544-18dc21a7cd85",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "29c3c4ed-79bb-4a7e-9674-d3796b51d02c",
+                "port": "2c106cf2-4ba8-4ee1-bce2-72319c99dc69"
+            },
+            "target": {
+                "cell": "ea0f75a9-c2c5-4831-ab00-853af7422c9b",
+                "port": "6160f8a7-47ec-4fc0-b85d-7555c01580f9"
+            },
+            "zIndex": 32
+        },
+        {
+            "shape": "edge",
+            "attrs": {
+                "line": {
+                    "stroke": "#5F95FF",
+                    "strokeWidth": 1,
+                    "targetMarker": {
+                        "name": "classic",
+                        "size": 8
+                    }
+                }
+            },
+            "id": "18094135-d290-4332-89dd-42406ae6c0f4",
+            "router": {
+                "name": "manhattan"
+            },
+            "source": {
+                "cell": "ea0f75a9-c2c5-4831-ab00-853af7422c9b",
+                "port": "5c92c9aa-8791-481d-8062-45f3a1b2cd04"
+            },
+            "target": {
+                "cell": "e61e1f82-3db8-4c0f-a256-f9a39188fe26",
+                "port": "e10fa244-e079-4f77-8a14-dcff649ca499"
+            },
+            "zIndex": 33,
+            "labels": [
+                {
+                    "attrs": {
+                        "label": {
+                            "text": "无需审批"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
